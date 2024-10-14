@@ -6,16 +6,16 @@
 .row__posters {
   display: flex;
   overflow-y: hidden;
-  overflow-x: scroll;
+  overflow-x: scroll; /* Ensure the element is scrollable */
   padding: 30px;
 }
 
-.row__posters ::-webkit-scrollbar {
-  display: none;
+.row__posters::-webkit-scrollbar {
+  display: none; /* Hide the scrollbar */
 }
 
 .row__poster {
-  max-height: 200px;
+  max-height: 150px;
   object-fit: contain;
   margin-right: 30px;
   margin-bottom: 15px;
@@ -28,7 +28,7 @@
 }
 
 .row__posterLarge {
-  max-height: 500px;
+  max-height: 300px;
 }
 
 .row__posterLarge:hover {
@@ -37,5 +37,5 @@
 }
 
 .row > h2 {
-  font-size: 3rem;
+  font-size: 2rem;
 }
