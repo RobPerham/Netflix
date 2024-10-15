@@ -1,7 +1,7 @@
 .loginScreen {
   position: relative;
   height: 100vh;
-  background-image: url("https://assets.nflxext.com/ffe/siteui/vlv3/2b4e7f7b-0b7e-4b0d-9c8b-1b7b3f7b3d6b/1d6b3b7b-0b7e-4b0d-9c8b-1b7b3f7b3d6b/US-en-20210104-popsignuptwoweeks-perspective_alpha_website_small.jpg")
+  background-image: url("https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.0UK_vowQJBw9a9M7nreEgAHaEK%26pid%3DApi&f=1&ipt=0360d309b224e2fdc41d6b2c1a29c5fb9f714d13b6e6e4af6feb153e81168827&ipo=images")
     center no-repeat;
   background-size: cover;
 }
@@ -24,6 +24,8 @@
   top: 0;
   width: 150px;
   padding-left: 20px;
+  padding-top: 20px;
+  object-fit: contain;
 }
 
 .loginScreen__button {
@@ -43,13 +45,55 @@
 }
 
 .loginScreen__body {
+  position: absolute;
+  top: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
   z-index: 1;
   color: white;
   padding: 20px;
+  left: 0;
+  right: 0;
 }
 
 .loginScreen__body > h1 {
-  font-size: 3rem;
+  font-size: 3.125rem;
   font-weight: 800;
   margin-bottom: 20px;
+}
+
+.loginScreen__body > h2 {
+  font-size: 1.625rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.loginScreen__body > h3 {
+  font-size: 1.125rem;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.loginScreen__input > form > input {
+  padding: 10px;
+  outline-width: 0;
+  height: 30px;
+  width: 30%;
+  border: none;
+  max-width: 600px;
+}
+
+.loginScreen__getStarted {
+  padding: 16px 20px;
+  font-size: 1rem;
+  color: white;
+  background-color: #e50914;
+  border: none;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.loginScreen__input {
+  margin-top: 20px;
 }
