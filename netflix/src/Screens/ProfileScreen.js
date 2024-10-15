@@ -12,21 +12,25 @@ function ProfileScreen() {
     <div className="profileScreen">
       <Nav />
       <div className="profileScreen__body">
-        <h1>Edit profile</h1>
-        <img
-          className="profileScreen__avatar"
-          src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
-          alt="Netflix Avatar"
-        />
-        <div className="profileScreen__details">
-          <h2>{user.email}</h2>
-          <div className="profileScreen__plans">
-            <button
-              onClick={() => auth.signOut()} // Corrected method call
-              className="profileScreen__signOut"
-            >
-              Sign Out
-            </button>
+        <h1>Edit Profile</h1>
+        <div className="profileScreen__info">
+          <img
+            className="profileScreen__avatar"
+            src="https://upload.wikimedia.org/wikipedia/commons/0/0b/Netflix-avatar.png"
+            alt="Netflix Avatar"
+          />
+          <div className="profileScreen__details">
+            <h2>{user.email}</h2>
+            <div className="profileScreen__plans">
+              <h3>Plans </h3>
+
+              <button
+                onClick={() => auth.signOut()} // Corrected method call
+                className="profileScreen__signOut"
+              >
+                Sign Out
+              </button>
+            </div>
           </div>
         </div>
       </div>
