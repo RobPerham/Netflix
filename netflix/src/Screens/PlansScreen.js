@@ -106,6 +106,14 @@ function PlansScreen() {
 
   return (
     <div className="plansScreen">
+      {subscription && (
+        <p>
+          Renewal date:{" "}
+          {new Date(
+            subscription?.current_period_end * 1000
+          ).toLocaleDateString()}
+        </p>
+      )}
       {Object.entries(products).map(([productId, productData]) => {
         console.log("Rendering product:", productData); // Debugging log
 
@@ -113,7 +121,12 @@ function PlansScreen() {
           ?.toLowerCase()
           .includes(subscription?.role);
         return (
-          <div className="plansScreen__plan" key={productId}>
+          <div
+            className={`${
+              isCurrentPackage && "plansScreen__plan--disable"
+            }plansScreen__plan`}
+            key={productId}
+          >
             <div className="plansScreen__info">
               <h5>{productData.name}</h5>
               <h6>{productData.description}</h6>

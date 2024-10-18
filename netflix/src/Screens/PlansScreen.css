@@ -32,3 +32,8 @@
   border: none;
   cursor: pointer;
 }
+
+.plansScreen__plan--disable > button {
+  background-color: #808080 !important;
+  cursor: not-allowed;
+}
