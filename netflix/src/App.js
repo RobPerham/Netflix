@@ -1,13 +1,12 @@
 import React, { useEffect } from "react";
 import "./App.css";
 import HomeScreen from "./Screens/HomeScreen";
+import ProfileScreen from "./Screens/ProfileScreen"; // Import ProfileScreen
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import LoginScreen from "./Screens/LoginScreen";
 import { auth } from "./firebase";
 import { useDispatch, useSelector } from "react-redux";
-import { login, logout } from "./features/userSlice";
-import { selectUser } from "./features/userSlice";
-import ProfileScreen from "./Screens/ProfileScreen";
+import { login, logout, selectUser } from "./features/userSlice";
 
 function App() {
   const user = useSelector(selectUser);
@@ -39,12 +38,11 @@ function App() {
           <LoginScreen />
         ) : (
           <Routes>
-            <Route path="/profile" element={<ProfileScreen />} />
+            <Route path="/" element={<HomeScreen />} />
+            <Route path="/profile" element={<ProfileScreen />} />{" "}
+            {/* Add ProfileScreen route */}
           </Routes>
         )}
-        <Routes>
-          <Route path="/" element={<HomeScreen />} />
-        </Routes>
       </Router>
     </div>
   );
